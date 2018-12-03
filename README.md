@@ -1,4 +1,5 @@
 BYOY
+-----
 
 Build your own yubikey - please don't expect too much because of the catchy
 title. In this workshoup you will not be able to build a fully fledged yubikey
@@ -19,7 +20,9 @@ from. With that you can, for example, unlock your KeePass. The HOTP-firmware
 has been developed by some guys from the labor, bochum originally.
 
 Feel free to join us, alter the firmware, the cases and build your own yubikey.
--------------------------------------------------------------------------------
+
+---
+
 Build your own yubikey, erwarte bei dem krassen Namen nicht zu viel. In dem
 Workshop wirst du keinen voll funktionsfähigen yubikey mit smartcard und
 manipulationssicherem speicher selber bauen können. Aber du wirst einen kleinen
