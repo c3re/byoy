@@ -21,6 +21,9 @@ has been developed by some guys from the labor, bochum originally.
 
 Feel free to join us, alter the firmware, the cases and build your own yubikey.
 
+The current state of the stl file can be downloaded here: 
+https://www.thingiverse.com/thing:3303209
+
 ---
 
 Build your own yubikey, erwarte bei dem krassen Namen nicht zu viel. In dem
@@ -44,5 +47,8 @@ Labor.
 Komm vorbei und fühl die frei an der Firmware rumzuspielen deine eigenen Ideen
 zu bauen ein neues Case zu designen oder einfach das zu nehmen was schon da
 ist. Wir freuen uns auf dich
+
+Das stl-file für das Gehäuse kann man sich hier herunterladen:
+https://www.thingiverse.com/thing:3303209
 
 Cheers

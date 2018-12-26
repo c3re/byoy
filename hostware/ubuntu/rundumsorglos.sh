@@ -13,7 +13,7 @@ echo "- reset the token counter"
 echo "- set the length of generated tokens to 8"
 echo "- install keepass, the HOTP Plugin and its dependencies"
 echo
-echo "If you are unhappy with that abort now using CTRL+C otherwise hit enter."
+echo -n "If you are unhappy with that abort now using CTRL+C otherwise hit enter."
 read
 
 apt-get -qq update
