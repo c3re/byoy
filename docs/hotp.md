@@ -46,16 +46,19 @@ https://keepass.info/extensions/v2/otpkeyprov/OtpKeyProv-2.6.zip
 
 entpacken und beide dateien nach /usr/lib/keepass2/plugins kopieren den plugins ordner muss man vorher anlegen
 
-apt install mono-complete
+`apt install mono-complete`
 
 Dann viele screenshots.
+
+Keepass nach dem Start:
+![alt text](https://github.com/c3re/byoy/blob/master/docs/keepass_screenshots/1keepass.png "keepass nach dem start")
 
 Amount of digits per Token = 8 setzen
 
 Einmal im Keepass,
 
 dann im badge-tool:
-badge-tool -d 8
+`badge-tool -d 8`
 
 Zum entsperren notwendige Token=3
 Look-Ahead count: 40
