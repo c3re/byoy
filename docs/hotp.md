@@ -53,6 +53,9 @@ Dann viele screenshots.
 Keepass nach dem Start:
 ![alt text](https://github.com/c3re/byoy/blob/master/docs/keepass_screenshots/1keepass.png "keepass nach dem start")
 
+Neue Database erstellen:
+![alt text](https://github.com/c3re/byoy/blob/master/docs/keepass_screenshots/2keepass.png)
+
 Amount of digits per Token = 8 setzen
 
 Einmal im Keepass,
