@@ -17,8 +17,13 @@ read
 apt-get -qq update
 apt-get -qq install mono-complete keepass2 libusb-0.1-4
 
-mkdir -p /usr/lib/keepass2/plugins
+if [[ $? -eq 0 ]] 
+then
+  echo -e -n "[ \033[01;32m OK \033[0m ]"
+fi
+
 ########################### Installing HOTP Plugin ##########################
+mkdir -p /usr/lib/keepass2/plugins
 wget --quiet "https://keepass.info/extensions/v2/otpkeyprov/OtpKeyProv-2.6.zip" \
 -O /usr/lib/keepass2/plugins
 unzip /usr/lib/keepass2/plugins/OtpKeyProv-2.6.zip -d /usr/lib/keepass2/plugins/
