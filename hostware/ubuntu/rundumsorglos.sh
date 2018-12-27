@@ -21,6 +21,10 @@ apt-get -qq install mono-complete keepass2 libusb-0.1-4
 wget --quiet "https://github.com/c3re/byoy/raw/master/hostware/commandline/badge-tool" \
   -O /usr/local/bin/badge-tool
 chmod +x /usr/local/bin/badge-tool
+mkdir -p /usr/lib/keepass2/plugins
+wget --quiet "https://keepass.info/extensions/v2/otpkeyprov/OtpKeyProv-2.6.zip"
+-O /usr/lib/keepass2/plugins
+
 dd if=/dev/urandom bs=1 count=32 status=noxfer 2> /dev/null|xxd -p -c32 > secret
 
 echo -n "Your new HOTP secret is: "
