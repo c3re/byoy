@@ -5,31 +5,37 @@ then
   exit
 fi
 
-echo "This script will do the following:"
-echo "- Download and install badge-tool (into /usr/local/bin)"
-echo "- create a new secret and store it in the file secret.txt)"
-echo "- write the secret to a token"
-echo "- reset the token counter"
-echo "- set the length of generated tokens to 8"
-echo "- install keepass, the HOTP Plugin and its dependencies"
+echo "This script will: " 
+echo "- install KeePass with HOTP support"
+echo "- generate a new random secret"
+echo "- flash the secret to the HOTP-stick"
 echo
 echo -n "If you are unhappy with that abort now using CTRL+C otherwise hit enter."
 read
 
+########################### Installing Keepass ##########################
 apt-get -qq update
 apt-get -qq install mono-complete keepass2 libusb-0.1-4
+
+mkdir -p /usr/lib/keepass2/plugins
+########################### Installing HOTP Plugin ##########################
+wget --quiet "https://keepass.info/extensions/v2/otpkeyprov/OtpKeyProv-2.6.zip" \
+-O /usr/lib/keepass2/plugins
+unzip /usr/lib/keepass2/plugins/OtpKeyProv-2.6.zip -d /usr/lib/keepass2/plugins/
+rm  /usr/lib/keepass2/plugins/OtpKeyProv-2.6.zip
+
+########################### Installing Badgetool ##########################
 wget --quiet "https://github.com/c3re/byoy/raw/master/hostware/commandline/badge-tool" \
   -O /usr/local/bin/badge-tool
 chmod +x /usr/local/bin/badge-tool
-mkdir -p /usr/lib/keepass2/plugins
-wget --quiet "https://keepass.info/extensions/v2/otpkeyprov/OtpKeyProv-2.6.zip"
--O /usr/lib/keepass2/plugins
 
+########################### generating secret ############################
 dd if=/dev/urandom bs=1 count=32 status=noxfer 2> /dev/null|xxd -p -c32 > secret
 
 echo -n "Your new HOTP secret is: "
 cat secret
 
+########################### configuring the USB-Stick ######################
 badge-tool -s $(cat secret)
 badge-tool -d 8
 badge-tool -r
