@@ -29,8 +29,8 @@ respectively.
 #include "hexdump.h"
 #include "opendevice.h" /* common code moved to separate module */
 
-#include "../../firmware/requests.h"   /* custom request numbers */
-#include "../../firmware/usbconfig.h"  /* device's VID/PID and names */
+#include "../../firmware/hotp/requests.h"   /* custom request numbers */
+#include "../../firmware/hotp/usbconfig.h"  /* device's VID/PID and names */
 
 int safety_question_override=0;
 int pad=-1;
