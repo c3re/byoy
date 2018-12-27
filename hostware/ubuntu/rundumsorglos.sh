@@ -17,7 +17,7 @@ echo -n "If you are unhappy with that abort now using CTRL+C otherwise hit enter
 read
 
 apt-get -qq update
-apt-get -qq install mono-complete keepass2
+apt-get -qq install mono-complete keepass2 libusb-0.1-4
 wget --quiet "https://github.com/c3re/byoy/raw/master/hostware/commandline/badge-tool" \
   -O /usr/local/bin/badge-tool
 chmod +x /usr/local/bin/badge-tool
